@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+ 
+ 
+<form action="/upload" enctype="multipart/form-data" method="POST">
+  <div class="login">
+    <div class="login-screen">
+      <div class="app-title">
+        <h1>Upload Files</h1>
+      </div>
+ 
+      <div class="login-form">
+        <div class="control-group">
+        <input type="file" multiple="" class="login-field"  name="file[]">
+        <label class="login-field-icon fui-user" for="login-name"></label>
+        </div>
+ 
+ 
+                <input type="submit" value="Upload" class="btn btn-primary btn-large btn-block" >
+          <br>
+      </div>
+    </div>
+  </div>
+
+</form>
+
+ <a class="btne" href='/logout'>Logout</a>
+
