@@ -22,8 +22,8 @@ app.config['ALLOWED_EXTENSIONS'] = set(['pdf'])
 def send_mail(mssg,toemail,subemail):
     msg = MIMEMultipart()
     message = mssg
-    password = "12345pranab"
-    msg['From'] = "developer.jalpaiguri@gmail.com"
+    password = "xyz"
+    msg['From'] = "abcd@xyz.com"
     msg['To'] = toemail
     msg['Subject'] = subemail
     msg.attach(MIMEText(message, 'plain'))
