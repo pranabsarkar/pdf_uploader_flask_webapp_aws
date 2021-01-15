@@ -29,10 +29,6 @@ flask_pdf_aws/
 ├── uploads
 ```
 
-**The architecture of the system**
-
-![Image](images/main.png)
-
 When the user opens the portal to upload their pdf files, they are provided with two options. Either they can log in using their existing credentials or simply they can sign up using their details to start uploading. Once the user has completed the registration process an email will be sent to their registered email id's which will contain the login credentials, as well as their details, will be uploaded inside the AWS DynamoDB.
 
 When the user will try to log in the details will be compared with the database present in AWS DynamoDB. After logging inside the portal, the user can upload multiple files. Once the user submits the files they are uploaded inside the AWS S3 bucket and a log is added inside the DynamoDB. After uploading the files the user can also view the list of the uploaded files with the option of logging out of the portal. I have used sessions and cloud storages for each login to ensure **security** and **data integrity**. 
@@ -70,54 +66,4 @@ python app.py
 ![Image](images/1.png)
 
 ​				*The webapp can be accessed inside a web-browser in this address: http://127.0.0.1:9000/*
-
-
-
-## Screenshots
-
-* **Login Page** 
-
-![Image](images/2.png)
-
-* **Registration Page** 
-
-![Image](images/3.png)
-
-* **Registration Completion** 
-
-![Image](images/4.png)
-
-* **Email containing the credentials**  
-
-![Image](images/5.png)
-
-* **In this AWS DynamoDB database we can see the table pranab1 which contains the user details.** 
-
-![Image](images/6.png)
-
-* **Popup for wrong credentials**  
-
-![Image](images/7.png)
-
-* **File uploading portal**  
-
-![Image](images/8.png)
-
-* **Selecting the files** 
-
-![Image](images/9.png)
-
-* **Files selected and ready for upload** 
-
-![Image](images/11.png)
-
-* **Files uploaded and their list** 
-
-![Image](images/12.png)
-
-* **Log Data** 
-
-![Image](images/13.png)
-
-
 
