@@ -2,8 +2,6 @@
 
 # pdf_uploader_flask_webapp_aws
 
-The problem statement was to create a webapp where users can upload their .pdf files.
-
 The `requirements.txt` file should list all Python libraries that your script depend on, and they will be installed using
 
 ```
