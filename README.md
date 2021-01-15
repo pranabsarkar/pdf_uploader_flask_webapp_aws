@@ -1,6 +1,6 @@
 
 
-# PDF_uploader_flask_webapp_aws
+# pdf_uploader_flask_webapp_aws
 
 The problem statement was to create a webapp where users can upload their .pdf files.
 
