@@ -15,24 +15,26 @@ class Process:
     def user_sign_up(self, *params):
         try:
             self.database_process.insert_item_into_user_db(
-                user_name=params['username'],
-                age=params['age'],
-                gender=params['gender'],
-                email_address=params['email_address'],
-                password=params['password']
+                user_name=params["username"],
+                age=params["age"],
+                gender=params["gender"],
+                email_address=params["email_address"],
+                password=params["password"],
             )
-            txt_description ='Thank you for the registration. Your Credentials for login are Email: {} \
-                and Password: {}'.format(params['email_address'], password=params['password'])
-            self.email_process.send_mail(txt_description,params['email_address'],'Registration of Account')
+            txt_description = "Thank you for the registration. Your Credentials for login are Email: {} \
+                and Password: {}".format(
+                params["email_address"], password=params["password"]
+            )
+            self.email_process.send_mail(
+                txt_description, params["email_address"], "Registration of Account"
+            )
             new_dict = {
-                'username': params['username'],
-                'age': params['age'],
-                'gender':params['gender'],
-                'email_address':params['email_address']
+                "username": params["username"],
+                "age": params["age"],
+                "gender": params["gender"],
+                "email_address": params["email_address"],
             }
             df = pd.DataFrame([new_dict])
-            df.to_csv('temp.csv')
+            df.to_csv("temp.csv")
         except Exception as e:
             print(e)
-
-
