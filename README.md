@@ -2,34 +2,19 @@
 
 # pdf_uploader_flask_webapp_aws
 
+This a light weight flask application which could be used to upload files securely into cloud storage.
+
 The `requirements.txt` file should list all Python libraries that your script depend on, and they will be installed using
 
 ```
 pip install -r requirements.txt
 ```
 
-The file structure of this project is given below
+# Background
 
-```
-flask_pdf_aws/
-├── app.py			 
-├── requirments.txt	 
-├── README.md
-├── templates
-│   ├── login.html
-│   ├── regsiter.html
-│   ├── reg_sub.html
-│   ├── upload.html
-│   ├── upload2.html
-├── static
-│   ├── style.css
-├── images
-├── uploads
-```
+When an user opens the portal to upload their pdf files, they are provided with two options. Either they can log in using their existing credentials or simply they can sign up using their details to start uploading. Once the user has completed the registration process an email will be sent to their registered email id. It will contain the login credentials, as well as their details, will be uploaded inside the AWS DynamoDB.
 
-When the user opens the portal to upload their pdf files, they are provided with two options. Either they can log in using their existing credentials or simply they can sign up using their details to start uploading. Once the user has completed the registration process an email will be sent to their registered email id's which will contain the login credentials, as well as their details, will be uploaded inside the AWS DynamoDB.
-
-When the user will try to log in the details will be compared with the database present in AWS DynamoDB. After logging inside the portal, the user can upload multiple files. Once the user submits the files they are uploaded inside the AWS S3 bucket and a log is added inside the DynamoDB. After uploading the files the user can also view the list of the uploaded files with the option of logging out of the portal. I have used sessions and cloud storages for each login to ensure **security** and **data integrity**. 
+When the user will try to log-in, the details will be compared with the database present in AWS DynamoDB. After logging inside the portal, the user can upload multiple files. Once the user submits the files they are uploaded inside the AWS S3 bucket and a log is added inside the DynamoDB.
 
 YouTube Link: https://youtu.be/BoWNN9XLi5Y 
 
@@ -63,5 +48,5 @@ python app.py
 
 ![Image](images/1.png)
 
-​				*The webapp can be accessed inside a web-browser in this address: http://127.0.0.1:9000/*
+*The webapp can be accessed inside a web-browser in this address: http://127.0.0.1:9000/*
 
