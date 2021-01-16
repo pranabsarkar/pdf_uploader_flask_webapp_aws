@@ -9,6 +9,9 @@ The `requirements.txt` file should list all Python libraries that your script de
 ```
 pip install -r requirements.txt
 ```
+# Overview - High Level Diagram
+
+![Image](images/dup.jpg)
 
 # Background
 
